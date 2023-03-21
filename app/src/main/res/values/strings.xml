@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">gpshelp2</string>
+    <string name="car_icon">scoraya</string>
+    <string name="profile_text">Профиль</string>
+    <string name="gps_text">GPS</string>
+    <string name="more_text">Подробнее</string>
+    <string name="documents_text">Документы</string>
+    <string name="logo_of_app_1">GPS</string>
+    <string name="logo_of_app_2">HELP</string>
+    <string name="familiya_user_profile">Фамилия:</string>
+    <string name="name_user_profile">Имя:</string>
+    <string name="otchestvo_user_profile">Отчество:</string>
+</resources>
