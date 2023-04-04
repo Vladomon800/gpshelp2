@@ -12,10 +12,12 @@
         android:layout_width="141dp"
         android:layout_height="67dp"
         android:layout_marginTop="472dp"
+        android:layout_marginBottom="12dp"
         android:clickable="true"
         android:text="Экстренная помощь"
+        app:layout_constraintBottom_toTopOf="@+id/textView8"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.844"
+        app:layout_constraintHorizontal_bias="0.781"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:visibility="visible" />
@@ -24,72 +26,74 @@
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="96dp"
-        android:layout_marginBottom="92dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="92dp"
         android:fontFamily="@font/montserrat_bold"
         android:text="@string/logo_of_app_2"
         android:textColor="@android:color/holo_red_dark"
         android:textSize="40sp"
-        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="0dp"
         android:layout_height="65dp"
+        android:layout_marginBottom="4dp"
         android:background="@color/asideBgcolor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent">
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/car_icon"
             android:layout_width="56dp"
             android:layout_height="65dp"
-            android:layout_marginEnd="40dp"
-            android:contentDescription="car"
-            app:layout_constraintEnd_toStartOf="@+id/profile"
+            android:contentDescription="@string/car_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/ic_ambulance_svgrepo_com"
-            tools:layout_editor_absoluteY="0dp" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_ambulance_svgrepo_com" />
 
-        <TextView
-            android:id="@+id/profile"
+        <Button
+            android:id="@+id/button_profile"
+            android:layout_width="110dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="68dp"
+            android:layout_marginEnd="2dp"
+            android:onClick="startNewActivity"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/button_gps"
+            app:layout_constraintStart_toStartOf="@+id/car_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="Профиль" />
+
+        <Button
+            android:id="@+id/button_gps"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:fontFamily="@font/montserrat_bold"
-            android:text="@string/profile_text"
-            android:textSize="14sp"
+            android:layout_marginStart="2dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/imageView"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/gps"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="64dp"
-            android:fontFamily="@font/montserrat_bold"
-            android:text="@string/gps_text"
-            android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/profile"
+            app:layout_constraintEnd_toStartOf="@+id/button_more"
+            app:layout_constraintStart_toEndOf="@+id/button_profile"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.489" />
+            app:layout_constraintVertical_bias="0.588"
+            android:text="GPS" />
 
-        <TextView
-            android:id="@+id/more"
-            android:layout_width="70dp"
-            android:layout_height="19dp"
-            android:layout_marginStart="60dp"
-            android:fontFamily="@font/montserrat_bold"
-            android:text="@string/more_text"
-            android:textSize="14sp"
+        <Button
+            android:id="@+id/button_more"
+            android:layout_width="131dp"
+            android:layout_height="49dp"
+            android:layout_marginStart="11dp"
+
+            android:textAlignment="center"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/gps"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/button_gps"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.478" />
+            app:layout_constraintVertical_bias="0.562"
+            android:text="подробнее" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -99,25 +103,25 @@
         android:layout_height="200dp"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.535"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.528"
+        app:layout_constraintVertical_bias="0.318"
         app:srcCompat="@drawable/ic_first_aid_kit_svgrepo_com" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="92dp"
+        android:layout_marginTop="12dp"
         android:fontFamily="@font/montserrat_bold"
         android:text="@string/logo_of_app_1"
         android:textColor="@color/black"
         android:textSize="40sp"
-        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
         app:layout_constraintEnd_toStartOf="@+id/textView8"
-        app:layout_constraintHorizontal_bias="0.848"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.898"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -145,29 +149,20 @@
         app:layout_constraintVertical_bias="0.029"
         tools:listitem="@layout/category_item" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/courseRecycler"
-        android:layout_width="327dp"
-        android:layout_height="112dp"
-        android:layout_marginTop="28dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/categoryRecycler"
-        app:layout_constraintVertical_bias="0.031" />
-
     <Button
         android:id="@+id/button"
         android:layout_width="138dp"
         android:layout_height="67dp"
         android:layout_marginTop="472dp"
+        android:layout_marginBottom="12dp"
         android:drawableTint="#F80606"
         android:text="Скорая помощь"
         android:textColor="@color/white"
         android:textColorHighlight="#FD0000"
         android:textColorLink="#FF0000"
+        app:layout_constraintBottom_toTopOf="@+id/textView6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.219"
+        app:layout_constraintHorizontal_bias="0.223"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:visibility="visible" />

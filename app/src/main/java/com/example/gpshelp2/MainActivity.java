@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 import com.example.gpshelp2.adapter.CategoryAdapter;
 import com.example.gpshelp2.adapter.CourseAdapter;
@@ -16,17 +17,43 @@ import com.example.gpshelp2.model.Course;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class MainActivity extends AppCompatActivity {
 
     RecyclerView categoryRecycler,courseRecycler;
     CategoryAdapter categoryAdapter;
     CourseAdapter courseAdapter;
-
+    Button button_profile,button_gps,button_more,button_more2,button_vhod,button_register;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        button_profile = findViewById(R.id.button_profile);
+        button_profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ProfilePacient.class);
+                startActivity(intent);
+            }
+        });
+        button_gps = findViewById(R.id.button_gps);
+        button_gps.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, GpsMapActivity.class);
+                startActivity(intent);
+            }
+        });
+        button_more = findViewById(R.id.button_more);
+        button_more.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MoreInformafionActivity.class);
+                startActivity(intent);
+            }
+        });
 
         List<Category> categoryList = new ArrayList<>();
         categoryList.add(new Category(1, "Профиль"));
@@ -36,22 +63,6 @@ public class MainActivity extends AppCompatActivity {
 
         setCategoryRecycler(categoryList);
 
-       List<Course> courseList = new ArrayList<>();
-        courseList.add(new Course(1, "free_icon_user_profile_2734847","\nf","1 января","начальный","#FFFFFFFF"));
-        Course a = new Course(1, "free_icon_user_profile_2734847","\nf","1 января","начальный","#FFFFFFFF");
-
-        setCourseRecycler(courseList);
-    }
-
-    private void setCourseRecycler(List<Course> courseList) {
-
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false);
-
-        courseRecycler = findViewById(R.id.courseRecycler);
-        courseRecycler.setLayoutManager(layoutManager);
-
-        courseAdapter = new CourseAdapter(this,courseList);
-        courseRecycler.setAdapter(courseAdapter);
     }
 
     private void setCategoryRecycler(List<Category> categoryList) {

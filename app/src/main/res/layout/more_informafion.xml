@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MoreInformafionActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="4dp"
+        android:background="@color/asideBgcolor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/car_icon"
+            android:layout_width="56dp"
+            android:layout_height="65dp"
+            android:contentDescription="@string/car_icon"
+            android:onClick="GoBack"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/ic_ambulance_svgrepo_com"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <Button
+            android:id="@+id/button_profile4"
+            android:layout_width="110dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginEnd="2dp"
+            android:onClick="startNewActivity"
+            android:text="Профиль"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/button_gps"
+            app:layout_constraintStart_toStartOf="@+id/car_icon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_gps4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="72dp"
+            android:onClick="startNewActivity"
+            android:text="GPS"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/button_profile"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.47" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="109dp"
+        android:layout_marginTop="273dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginBottom="370dp"
+        android:text="Здесь должна быть какая то инфа"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
