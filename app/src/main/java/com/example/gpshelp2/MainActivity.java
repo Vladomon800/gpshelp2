@@ -23,12 +23,20 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView categoryRecycler,courseRecycler;
     CategoryAdapter categoryAdapter;
     CourseAdapter courseAdapter;
-    Button button_profile,button_gps,button_more,button_more2,button_vhod,button_register;
+    Button button_profile,button_gps,button_more,button_more2,button_vhod,button_register,button_send;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        button_send = findViewById(R.id.buttonsend);
+        button_send.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, CallinfoActivity.class);
+                startActivity(intent);
+            }
+        });
 
         button_profile = findViewById(R.id.button_profile);
         button_profile.setOnClickListener(new View.OnClickListener() {
