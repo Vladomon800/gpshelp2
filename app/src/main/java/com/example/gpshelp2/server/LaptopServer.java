@@ -7,8 +7,8 @@ import java.net.Socket;
 
 public class LaptopServer {
     private static final String LOG_TAG = "myServerApp"; // ip адрес сервера, который принимает соединения
-    private String mServerName = "192.168.43.21"; // номер порта, на который сервер принимает соединения
-    private int mServerPort = 6789; // сокет, через которий приложения общается с сервером
+    private String mServerName = "192.168.1.81"; // номер порта, на который сервер принимает соединения
+    private int mServerPort = 1111; // сокет, через которий приложения общается с сервером
     private Socket mSocket = null;
 
     public LaptopServer() {

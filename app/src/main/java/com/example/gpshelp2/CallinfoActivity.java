@@ -13,6 +13,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.gpshelp2.server.LaptopServer;
 import com.google.android.material.textfield.TextInputEditText;
@@ -72,8 +73,13 @@ public class CallinfoActivity extends AppCompatActivity {
             @Override
             public void run() {
                 try {
+                    if (textadress.getText().toString().isEmpty() ||  textinfo.getText().toString().isEmpty()){
+                        Toast.makeText(CallinfoActivity.this, "Fields cannot be empty", Toast.LENGTH_SHORT).show();
+                    } else { mServer.sendData(textadress.getText().toString().getBytes());
+                        mServer.sendData( textinfo.getText().toString().getBytes());
                     /* отправляем на сервер данные */
-                    mServer.sendData("Send text to server".getBytes());
+                   // mServer.sendData("Send text to server".getBytes());
+                    }
                 } catch (Exception e) {
                     Log.e(LOG_TAG, e.getMessage());
                 }
