@@ -7,8 +7,6 @@ import java.net.Socket;
 
 public class LaptopServer {
     private static final String LOG_TAG = "myServerApp"; // ip адрес сервера, который принимает соединения
-    private String mServerName = "192.168.1.81"; // номер порта, на который сервер принимает соединения
-    private int mServerPort = 1111; // сокет, через которий приложения общается с сервером
     private Socket mSocket = null;
 
     public LaptopServer() {
@@ -17,6 +15,10 @@ public class LaptopServer {
     public void openConnection() throws Exception {
         closeConnection();
         try {
+            // номер порта, на который сервер принимает соединения
+            String mServerName = "192.168.43.21";
+            // сокет, через которий приложения общается с сервером
+            int mServerPort = 1111;
             mSocket = new Socket(mServerName, mServerPort);
         } catch (IOException e) {
             throw new Exception("Невозможно создать сокет: " + e.getMessage());
