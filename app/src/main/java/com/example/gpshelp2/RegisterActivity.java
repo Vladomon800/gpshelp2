@@ -55,7 +55,7 @@ public class RegisterActivity extends AppCompatActivity {
                                         ref.child("Users").child(mAuth.getCurrentUser().getUid()).child("email").setValue(email_register.getText().toString());
                                         ref.child("Users").child(mAuth.getCurrentUser().getUid()).child("password").setValue(password_register.getText().toString());
 
-                                        Intent intent = new Intent (RegisterActivity.this, MainActivity.class);
+                                        Intent intent = new Intent (RegisterActivity.this, add_users_profile_iformation.class);
                                         startActivity(intent);
                                     }else{
                                         Toast.makeText(RegisterActivity.this, "You have some errors", Toast.LENGTH_SHORT).show();
