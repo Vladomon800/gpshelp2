@@ -26,7 +26,7 @@ public class ReadActivity extends AppCompatActivity {
     private List<user_informathion> listTemp;
 
     private DatabaseReference mDataBase;
-    private String USER_KEY = "User";
+    private String USER_KEY = "USER";
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,10 +54,10 @@ public class ReadActivity extends AppCompatActivity {
                 if(listTemp.size() > 0)listTemp.clear();
                 for(DataSnapshot ds : dataSnapshot.getChildren())
                 {
-                    user_informathion user = ds.getValue(user_informathion.class);
-                    assert user != null;
-                    listData.add(user.name);
-                    listTemp.add(user);
+                    user_informathion USER = ds.getValue(user_informathion.class);
+                    assert USER != null;
+                    listData.add(USER.name);
+                    listTemp.add(USER);
                 }
                 adapter.notifyDataSetChanged();
 
@@ -75,10 +75,16 @@ public class ReadActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                user_informathion user = listTemp.get(position);
+                user_informathion USER = listTemp.get(position);
                 Intent i = new Intent(ReadActivity.this, ShowActivity.class);
-                i.putExtra(Constant.USER_NAME,user.name);
-                i.putExtra(Constant.USER_SEC_NAME,user.sec_name);
+                i.putExtra(Constant.USER_NAME,USER.name);
+                i.putExtra(Constant.USER_SEC_NAME,USER.sec_name);
+                i.putExtra(Constant.USER_OTCHESTVO,USER.otchestvo);
+                i.putExtra(Constant.USER_DATAROJDEN,USER.datarojden);
+                i.putExtra(Constant.USER_ADRESS,USER.adress);
+                i.putExtra(Constant.USER_PASPORT,USER.pasport);
+                i.putExtra(Constant.USER_SNILS,USER.snils);
+                i.putExtra(Constant.USER_POLICE,USER.police);
                 startActivity(i);
 
             }

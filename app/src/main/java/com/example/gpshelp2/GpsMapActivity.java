@@ -53,9 +53,11 @@ public class GpsMapActivity extends FragmentActivity implements OnMapReadyCallba
     public void onMapReady(@NonNull GoogleMap googleMap) {
 
         this.gMap = googleMap;
-        LatLng mapRussia = new LatLng(60.00, 100.00);
-        this.gMap.addMarker(new MarkerOptions().position(mapRussia).title("Marker in Russia"));
+        LatLng mapRussia = new LatLng(57.767918, 40.926894);
+        gMap.moveCamera( CameraUpdateFactory.newLatLngZoom(new LatLng(57.767918,40.926894) , 14.0f) );
+        this.gMap.addMarker(new MarkerOptions().position(mapRussia).title("Marker in Kostroma"));
         this.gMap.moveCamera(CameraUpdateFactory.newLatLng(mapRussia));
+
 
     }
 

@@ -34,9 +34,10 @@ public class MainActivity extends AppCompatActivity {
         button_profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ProfilePacient.class);
+                Intent intent = new Intent(MainActivity.this, ReadActivity.class);
                 startActivity(intent);
             }
+
         });
         button_gps = findViewById(R.id.button_gps);
         button_gps.setOnClickListener(new View.OnClickListener() {

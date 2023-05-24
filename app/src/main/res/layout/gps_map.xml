@@ -5,35 +5,34 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".GpsMapActivity">
-    <fragment
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:id="@+id/map"
-        android:name ="com.google.android.gms.maps.SupportMapFragment"
-        android:layout_height="match_parent"
-        tools:context=".MapsActivity"/>
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
-        android:layout_width="0dp"
-        android:layout_height="65dp"
+        android:layout_width="411dp"
+        android:layout_height="67dp"
         android:background="@color/asideBgcolor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/map">
 
         <ImageView
             android:id="@+id/car_icon"
-            android:layout_width="56dp"
-            android:layout_height="65dp"
+            android:layout_width="68dp"
+            android:layout_height="63dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="48dp"
+            android:layout_marginBottom="1dp"
             android:contentDescription="@string/car_icon"
             android:onClick="GoBack"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/button_profile3"
             app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/ic_ambulance_svgrepo_com"
-            tools:layout_editor_absoluteY="0dp" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_ambulance_svgrepo_com" />
 
         <Button
             android:id="@+id/button_more3"
@@ -60,14 +59,25 @@
             android:layout_marginTop="5dp"
             android:layout_marginEnd="9dp"
             android:onClick="startNewActivity"
+            android:text="Профиль"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/button5"
             app:layout_constraintStart_toEndOf="@+id/car_icon"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.333"
-            android:text="Профиль" />
+            app:layout_constraintVertical_bias="0.333" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="407dp"
+        android:layout_height="767dp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".MapsActivity" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

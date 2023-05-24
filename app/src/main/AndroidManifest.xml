@@ -51,6 +51,20 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".ReadActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ShowActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".ProfilePacient"
             android:exported="false">
             <meta-data
