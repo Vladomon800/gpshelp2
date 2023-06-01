@@ -58,6 +58,8 @@ public class LoginActivity extends AppCompatActivity {
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     if (task.isSuccessful()){
                                         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                                        Intent intent2 = new Intent(LoginActivity.this, ProfilePacient.class);
+                                        intent2.putExtra("email",email_login.getText().toString());
                                         startActivity(intent);
                                     }else{
                                         Toast.makeText(LoginActivity.this, "You have some errors", Toast.LENGTH_SHORT).show();

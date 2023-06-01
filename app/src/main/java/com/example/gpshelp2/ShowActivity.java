@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class ShowActivity extends AppCompatActivity
 {
-    private TextView tvName, tvSecName, tvEmail, tvPasport, tvSnils, tvPolice, tvOtchestvo, tvDatarojden, tvAdress;
+    private TextView tvName, tvSecName, tvPasport, tvSnils, tvPolice, tvOtchestvo, tvDatarojden, tvAdress;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

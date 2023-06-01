@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         button_profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ReadActivity.class);
+                Intent intent = new Intent(MainActivity.this, ProfilePacient.class);
                 startActivity(intent);
             }
 
