@@ -61,18 +61,35 @@
 
     <TextView
         android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="365dp"
+        android:layout_height="403dp"
         android:layout_marginStart="109dp"
-        android:layout_marginTop="273dp"
         android:layout_marginEnd="76dp"
-        android:layout_marginBottom="370dp"
-        android:text="Здесь должна быть какая то инфа"
+        android:text="Для использования приложения  GPS-HELP вам понадобятся следующие инструкции:
+Откройте приложение и перейдите на вкладку GPS.
+
+
+
+
+Дайте разрешение на использование геолокации вашего устройства.
+
+
+После вам покажет  ваше текущее местоположение
+
+
+Перейдите на вкладку Подробнее, чтобы увидеть инструкцию по использованию приложения.
+
+
+Чтобы отредактировать свой профиль, нажмите на соответствующую кнопку и внесите необходимые изменения.
+
+
+Если вы хотите выйти из своей учетной записи, нажмите кнопку Выход."
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.618"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.339" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -44,6 +44,7 @@
             android:layout_marginBottom="10dp"
             android:onClick="startNewActivity"
             android:text="Подробнее"
+            android:backgroundTint="#AF2525"
             android:textAlignment="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -55,16 +56,17 @@
             android:id="@+id/button_profile3"
             android:layout_width="118dp"
             android:layout_height="49dp"
-            android:layout_marginStart="48dp"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="5dp"
             android:layout_marginEnd="9dp"
             android:onClick="startNewActivity"
             android:text="Профиль"
+            android:backgroundTint="#AF2525"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/button5"
             app:layout_constraintStart_toEndOf="@+id/car_icon"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.333" />
+            app:layout_constraintVertical_bias="0.384" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

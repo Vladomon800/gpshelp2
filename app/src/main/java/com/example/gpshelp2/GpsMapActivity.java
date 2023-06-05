@@ -23,6 +23,7 @@ public class GpsMapActivity extends FragmentActivity implements OnMapReadyCallba
     Button button_more3, button_profile3;
     GoogleMap gMap;
     FrameLayout map;
+    GpsTest gspimplement;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,14 +48,17 @@ public class GpsMapActivity extends FragmentActivity implements OnMapReadyCallba
         map = findViewById(R.id.map);
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
     }
 
     @Override
     public void onMapReady(@NonNull GoogleMap googleMap) {
-
+        double latitude,longitude;
+        latitude = getIntent().getDoubleExtra("Latitude",   57.767918);
+        longitude = getIntent().getDoubleExtra("Longitude",40.926894);
         this.gMap = googleMap;
-        LatLng mapRussia = new LatLng(57.767918, 40.926894);
-        gMap.moveCamera( CameraUpdateFactory.newLatLngZoom(new LatLng(57.767918,40.926894) , 14.0f) );
+        LatLng mapRussia = new LatLng(latitude,longitude);
+        gMap.moveCamera( CameraUpdateFactory.newLatLngZoom(new LatLng (latitude,longitude) , 14.0f) );
         this.gMap.addMarker(new MarkerOptions().position(mapRussia).title("Marker in Kostroma"));
         this.gMap.moveCamera(CameraUpdateFactory.newLatLng(mapRussia));
 
