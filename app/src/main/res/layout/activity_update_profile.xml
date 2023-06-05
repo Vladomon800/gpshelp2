@@ -5,19 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_centerHorizontal="true"
+    android:background="@drawable/v870"
     android:orientation="horizontal">
 
     <EditText
         android:id="@+id/upAdress"
-        android:layout_width="242dp"
+        android:layout_width="302dp"
         android:layout_height="49dp"
         android:ems="10"
         android:hint="Введите адрес"
-        android:textColor="@android:color/darker_gray"
         android:inputType="text"
+        android:textColor="@android:color/darker_gray"
         app:layout_constraintBottom_toTopOf="@+id/upPasport"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.597"
+        app:layout_constraintHorizontal_bias="0.917"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/upDaterojden" />
 
@@ -27,8 +28,8 @@
         android:layout_height="50dp"
         android:ems="10"
         android:hint="Введите  номер"
-        android:textColor="@android:color/darker_gray"
         android:inputType="date"
+        android:textColor="@android:color/darker_gray"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.597"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,8 +41,8 @@
         android:layout_height="41dp"
         android:ems="10"
         android:hint="Введите номер"
-        android:textColor="@android:color/darker_gray"
         android:inputType="date"
+        android:textColor="@android:color/darker_gray"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.594"
         app:layout_constraintStart_toStartOf="parent"
@@ -87,6 +88,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="120dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="15dp"
         android:fontFamily="@font/montserrat_bold"
         android:text="@string/logo_of_app_1"
         android:textColor="@color/black"
@@ -102,14 +104,13 @@
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="92dp"
         android:fontFamily="@font/montserrat_bold"
         android:text="@string/logo_of_app_2"
         android:textColor="@android:color/holo_red_dark"
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.674"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.075" />
 
@@ -120,8 +121,9 @@
         android:layout_marginTop="32dp"
         android:ems="10"
         android:hint="Введите серию и номер"
-        android:textColor="@android:color/darker_gray"
         android:inputType="date"
+        android:maxLength="11"
+        android:textColor="@android:color/darker_gray"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.597"
         app:layout_constraintStart_toStartOf="parent"
@@ -209,8 +211,8 @@
         android:layout_marginTop="1dp"
         android:ems="10"
         android:hint="Введите фамилию"
-        android:textColor="@android:color/darker_gray"
         android:inputType="text"
+        android:textColor="@android:color/darker_gray"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.597"
         app:layout_constraintStart_toStartOf="parent"
@@ -232,8 +234,9 @@
         android:layout_height="52dp"
         android:ems="10"
         android:hint="Введите дату рождения"
-        android:textColor="@android:color/darker_gray"
         android:inputType="date"
+        android:maxLength="10"
+        android:textColor="@android:color/darker_gray"
         app:layout_constraintBottom_toTopOf="@+id/upAdress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.588"
@@ -271,11 +274,13 @@
         android:layout_height="70dp"
         android:layout_marginTop="4dp"
         android:text="СОХРАНИТЬ"
+        android:backgroundTint="#AF2525"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="0dp"
@@ -304,6 +309,7 @@
             android:layout_marginEnd="28dp"
             android:layout_marginBottom="7dp"
             android:text="GPS"
+            android:backgroundTint="#AF2525"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/button_more"
             app:layout_constraintStart_toEndOf="@+id/car_icon"
@@ -320,6 +326,7 @@
             android:layout_marginBottom="10dp"
             android:onClick="startNewActivity"
             android:text="Подробнее"
+            android:backgroundTint="#AF2525"
             android:textAlignment="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -328,5 +335,17 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <EditText
+        android:id="@+id/upEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="gone" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

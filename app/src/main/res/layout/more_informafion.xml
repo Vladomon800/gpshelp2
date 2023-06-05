@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/v870"
     tools:context=".MoreInformafionActivity">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -22,6 +23,7 @@
             android:layout_height="65dp"
             android:contentDescription="@string/car_icon"
             android:onClick="GoBack"
+
             app:layout_constraintStart_toStartOf="parent"
             app:srcCompat="@drawable/ic_ambulance_svgrepo_com"
             tools:layout_editor_absoluteY="0dp" />
@@ -34,6 +36,7 @@
             android:layout_marginEnd="2dp"
             android:onClick="startNewActivity"
             android:text="Профиль"
+            android:backgroundTint="#AF2525"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/button_gps"
             app:layout_constraintStart_toStartOf="@+id/car_icon"
@@ -47,6 +50,7 @@
             android:layout_marginEnd="72dp"
             android:onClick="startNewActivity"
             android:text="GPS"
+            android:backgroundTint="#AF2525"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/button_profile"

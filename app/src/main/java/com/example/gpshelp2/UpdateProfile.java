@@ -26,7 +26,7 @@ import java.util.Objects;
 public class UpdateProfile extends AppCompatActivity {
 
     private Button btn_up;
-    private EditText upName,upSecondName,upOtchectvo,upDaterojden,upAdress,upPasport,upSnils,upPolice;
+    private EditText upEmail,upName,upSecondName,upOtchectvo,upDaterojden,upAdress,upPasport,upSnils,upPolice;
     private String currentUserID;
     FirebaseAuth mAuth;
     private DatabaseReference rootRef;
@@ -38,6 +38,7 @@ public class UpdateProfile extends AppCompatActivity {
 
         btn_up = findViewById(R.id.btn_up);
         upName = findViewById(R.id.upName);
+        upEmail = findViewById(R.id.upEmail);
         upSecondName = findViewById(R.id.upSecondName);
         upOtchectvo = findViewById(R.id.upOtchectvo);
         upDaterojden = findViewById(R.id.upDaterojden);
@@ -46,8 +47,9 @@ public class UpdateProfile extends AppCompatActivity {
         upSnils = findViewById(R.id.upSnils);
         upPolice = findViewById(R.id.upPolice);
 
-        String Name,SecondName,Otchectvo,Daterojden,Adress,Pasport,Snils,Police;
+        String Name,Email,SecondName,Otchectvo,Daterojden,Adress,Pasport,Snils,Police;
         Name = getIntent().getStringExtra("name");
+        Email = getIntent().getStringExtra("email");
         SecondName = getIntent().getStringExtra("secondname");
         Otchectvo = getIntent().getStringExtra("otchestvo");
         Daterojden = getIntent().getStringExtra("daterojden");
@@ -57,6 +59,7 @@ public class UpdateProfile extends AppCompatActivity {
         Police = getIntent().getStringExtra("snils");
         upName.setText(Name);
         upSecondName.setText(SecondName);
+        upEmail.setText(Email);
         upOtchectvo.setText(Otchectvo);
         upDaterojden.setText(Daterojden);
         upAdress.setText(Adress);
@@ -82,6 +85,7 @@ public class UpdateProfile extends AppCompatActivity {
     private void UpdateInformation() {
 
         String name = upName.getText().toString();
+        String email = upEmail.getText().toString();
         String sec_name = upSecondName.getText().toString();
         String otchestvo = upOtchectvo.getText().toString();
         String datarojden = upDaterojden.getText().toString();
@@ -98,6 +102,7 @@ public class UpdateProfile extends AppCompatActivity {
             HashMap<String,Object> profileMap = new HashMap<>();
             profileMap.put("uid",currentUserID);
             profileMap.put("name",name);
+            profileMap.put("email",email);
             profileMap.put("sec_name",sec_name);
             profileMap.put("otchestvo",otchestvo);
             profileMap.put("datarojden",datarojden);
@@ -121,6 +126,11 @@ public class UpdateProfile extends AppCompatActivity {
                 }
             });
         }
+    }
+    private void GoBack(View v){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+
     }
 }
 

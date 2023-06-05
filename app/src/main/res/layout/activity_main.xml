@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/mainBgcolor"
+    android:background="@drawable/v870"
     tools:context=".MainActivity">
 
     <Button
@@ -15,9 +15,10 @@
         android:layout_marginBottom="12dp"
         android:clickable="true"
         android:text="Экстренная помощь"
+        android:backgroundTint="#AF2525"
         app:layout_constraintBottom_toTopOf="@+id/textView8"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.781"
+        app:layout_constraintHorizontal_bias="0.818"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:visibility="visible" />
@@ -26,7 +27,7 @@
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="64dp"
         android:layout_marginEnd="92dp"
         android:fontFamily="@font/montserrat_bold"
         android:text="@string/logo_of_app_2"
@@ -64,6 +65,7 @@
             android:layout_marginEnd="2dp"
             android:onClick="onClickRead"
             android:text="Профиль"
+            android:backgroundTint="#AF2525"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/button_gps"
             app:layout_constraintStart_toStartOf="@+id/car_icon"
@@ -74,26 +76,26 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="2dp"
+            android:text="GPS"
+            android:backgroundTint="#AF2525"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/button_more"
             app:layout_constraintStart_toEndOf="@+id/button_profile"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.588"
-            android:text="GPS" />
+            app:layout_constraintVertical_bias="0.47" />
 
         <Button
             android:id="@+id/button_more"
             android:layout_width="131dp"
             android:layout_height="49dp"
-            android:layout_marginStart="11dp"
-
+            android:layout_marginStart="5dp"
+            android:backgroundTint="#AF2525"
+            android:text="подробнее"
             android:textAlignment="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/button_gps"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.562"
-            android:text="подробнее" />
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -113,13 +115,13 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="64dp"
         android:fontFamily="@font/montserrat_bold"
         android:text="@string/logo_of_app_1"
         android:textColor="@color/black"
         android:textSize="40sp"
         app:layout_constraintEnd_toStartOf="@+id/textView8"
-        app:layout_constraintHorizontal_bias="0.898"
+        app:layout_constraintHorizontal_bias="0.848"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button" />
 
@@ -155,14 +157,15 @@
         android:layout_height="67dp"
         android:layout_marginTop="472dp"
         android:layout_marginBottom="12dp"
-        android:drawableTint="#F80606"
+        android:drawableTint="#F80909"
         android:text="Скорая помощь"
         android:textColor="@color/white"
         android:textColorHighlight="#FD0000"
         android:textColorLink="#FF0000"
+        android:backgroundTint="#AF2525"
         app:layout_constraintBottom_toTopOf="@+id/textView6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.223"
+        app:layout_constraintHorizontal_bias="0.252"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:visibility="visible" />

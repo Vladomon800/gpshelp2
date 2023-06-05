@@ -33,7 +33,7 @@ public class ProfilePacient extends AppCompatActivity {
     DatabaseReference users;
     private String USER_KEY = "Users";
 
-    Button button_more2,button_gps2,btn_up;
+    Button button_more2,button_gps2,btn_up,btn_signOut;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +51,8 @@ public class ProfilePacient extends AppCompatActivity {
         edSnils2 = findViewById(R.id.edSnils2);
         edEmail2 = findViewById(R.id.edEmail2);
         button_more2 = findViewById(R.id.button_more2);
+        btn_signOut = findViewById(R.id.btn_signOut);
+
 
         user = auth.getCurrentUser();
         if (user == null){
@@ -109,6 +111,7 @@ public class ProfilePacient extends AppCompatActivity {
             public void onClick(View v) {
                     Intent intent = new Intent(  ProfilePacient.this, UpdateProfile.class);
                     intent.putExtra("name",edName2.getText().toString());
+                    intent.putExtra("email",edEmail2.getText().toString());
                     intent.putExtra("secondname",edSecondName2.getText().toString());
                     intent.putExtra("otchestvo",edOtchectvo2.getText().toString());
                     intent.putExtra("daterojden",edDaterojden2.getText().toString());
@@ -119,6 +122,14 @@ public class ProfilePacient extends AppCompatActivity {
 
                     startActivity(intent);
                 }
+        });
+        btn_signOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+                Intent i = new Intent(ProfilePacient.this, LoginActivity.class);
+                startActivity(i);
+            }
         });
 
     }
